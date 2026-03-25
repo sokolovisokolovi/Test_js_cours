@@ -1,5 +1,12 @@
 import { test, expect } from '@playwright/test';
 
+
+const elements = [
+{
+//locator: (page) =>  page.getByRole('link', { name: 'Get started' }).click()
+},
+
+]
 test.describe('test', () => {
 test.beforeEach(async ({ page }) => {
 await page.goto('https://playwright.dev/');
