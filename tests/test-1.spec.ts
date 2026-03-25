@@ -1,12 +1,11 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('test', () => {
-
-    test('test', async ({ page }) => {
-    
-
+test.beforeEach(async ({ page }) => {
 await page.goto('https://playwright.dev/');
+});
 
+test('test', async ({ page }) => {    
 await page.getByRole('link', { name: 'Get started' }).click();
 await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 await page.goto('https://playwright.dev/');
